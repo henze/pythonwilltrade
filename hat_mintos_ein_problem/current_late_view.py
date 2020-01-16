@@ -17,7 +17,7 @@ from tabulate import tabulate
 
 conn = sqlite3.connect('mintos.db')
 c = conn.cursor()
-results = c.execute('select "Loan Originator", sum("Initial Loan Amount"), "Loan Status" from mintos_data_2 \
+results = c.execute('select "Loan Originator", sum("Initial Loan Amount"), "Loan Status" from mintos_data \
             where "Loan Status" ="Current" or \
             "Loan Status" = "Default" or \
             "Loan Status" = "Grace Period" or \
